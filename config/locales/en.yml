@@ -153,6 +153,7 @@ en:
   notice_account_pending: "Your account was created and is now pending administrator approval."
   notice_default_data_loaded: Default configuration successfully loaded.
   notice_unable_delete_version: Unable to delete version.
+  notice_unable_delete_time_entry: Unable to delete time log entry.
   notice_issue_done_ratios_updated: Issue done ratios updated.
   
   error_can_t_load_default_data: "Default configuration could not be loaded: {{value}}"
@@ -638,6 +639,7 @@ en:
   label_changes_details: Details of all changes
   label_issue_tracking: Issue tracking
   label_spent_time: Spent time
+  label_overall_spent_time: Overall spent time
   label_f_hour: "{{value}} hour"
   label_f_hour_plural: "{{value}} hours"
   label_time_tracking: Time tracking
