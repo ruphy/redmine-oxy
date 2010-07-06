@@ -53,7 +53,8 @@ class MyController < ApplicationController
     @user = User.current
     @pref = @user.pref
     if request.post?
-      @user.attributes = params[:user]
+      # Only allow changing language in the controller; first/last name, email, OpenID handled via LDAP
+      @user.language = User.new(params[:user]).language
       @user.mail_notification = (params[:notification_option] == 'all')
       @user.pref.attributes = params[:pref]
       @user.pref[:no_self_notified] = (params[:no_self_notified] == '1')
