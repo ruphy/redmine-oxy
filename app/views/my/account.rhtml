@@ -12,13 +12,7 @@
 <div class="splitcontentleft">
 <h3><%=l(:label_information_plural)%></h3>
 <div class="box tabular">
-<p><%= f.text_field :firstname, :required => true %></p>
-<p><%= f.text_field :lastname, :required => true %></p>
-<p><%= f.text_field :mail, :required => true %></p>
 <p><%= f.select :language, lang_options_for_select %></p>
-<% if Setting.openid? %>
-<p><%= f.text_field :identity_url  %></p>
-<% end %>
 
 <% @user.custom_field_values.select(&:editable?).each do |value| %>
 	<p><%= custom_field_tag_with_label :user, value %></p>
