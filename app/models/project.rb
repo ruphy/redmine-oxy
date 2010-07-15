@@ -68,9 +68,9 @@ class Project < ActiveRecord::Base
   validates_associated :repository, :wiki
   validates_length_of :name, :maximum => 30
   validates_length_of :homepage, :maximum => 255
-  validates_length_of :identifier, :in => 1..20
+  validates_length_of :identifier, :in => 1..50
   # donwcase letters, digits, dashes but not digits only
-  validates_format_of :identifier, :with => /^(?!\d+$)[a-z0-9\-]*$/, :if => Proc.new { |p| p.identifier_changed? }
+  validates_format_of :identifier, :with => /^(?!\d+$)[a-z0-9\-\/]*$/, :if => Proc.new { |p| p.identifier_changed? }
   # reserved words
   validates_exclusion_of :identifier, :in => %w( new )
 
